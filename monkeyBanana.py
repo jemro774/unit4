@@ -5,9 +5,25 @@
 from ggame import *
 
 #constants
-ROWS = 15
+ROWS = 20
 COLS = 20
 CELL_SIZE = 20
+
+def moveRight(event):
+    if monkey.x < (COLS-1)*CELL_SIZE:
+        monkey.x += CELL_SIZE
+
+def moveLeft(event):
+    if monkey.x > 0:
+        monkey.x -= CELL_SIZE
+    
+def moveUp(event):
+    if monkey.y > 0:
+        monkey.y -= CELL_SIZE
+    
+def moveDown(event):
+    if monkey.y < (ROWS-1)*CELL_SIZE:
+        monkey.y += CELL_SIZE
 
 if __name__ == '__main__':
     
@@ -20,8 +36,11 @@ if __name__ == '__main__':
     bananaBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,yellow),yellow)
     
     Sprite(jungleBox)
-    monkey = Sprite(monkeyBox)
     Sprite(bananaBox,(COLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
+    monkey = Sprite(monkeyBox)
     
-    App().litsenKeyEvent('keydown','right arrow',moveRight)
+    App().listenKeyEvent('keydown','right arrow',moveRight)
+    App().listenKeyEvent('keydown','left arrow',moveLeft)
+    App().listenKeyEvent('keydown','up arrow',moveUp)
+    App().listenKeyEvent('keydown','down arrow',moveDown)
     App().run()
