@@ -16,9 +16,20 @@ redOutline = LineStyle(1,red)
 orangeOutline = LineStyle(1,orange)
 yellowOutline = LineStyle(1,yellow)
 greenOutline = LineStyle(1,green)
+lightBlueOutline = LineStyle(1,lightBlue)
+blueOutline = LineStyle(1,blue)
+purpleOutline = LineStyle(1,purple)
 
 def mouseClick(event):
-    
-    
+    num = randint(1,7)
+    if num = 1:
+        color = red
+        outline = redOutline
+    elif num = 2:
+        color = orange
+    elif num = 3:
+        color = yellow
+    rectangle = RectangleAsset(1000,1000,outline,color)
+        
 App().listenMouseEvent('click', mouseClick)
 App().run()
