@@ -3,11 +3,10 @@
 #printSquares.py - prints out a grid of squares
 
 
-def printSquares(x,y):
+def printSquares(y,x):
     for i in range(0,y):
         print('+'+x*'--+')
         print('|  '+x*'|  ')
     print('+'+x*'--+')
 
-printSquares(5,6)
-
+printSquares(2,4)
