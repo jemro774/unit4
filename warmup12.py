@@ -7,4 +7,4 @@ def GCF(x,y):
         if x%i == 0 and y%i == 0:
             return i
 
-print(GCF(30,10))
+print(GCF(56,40))
