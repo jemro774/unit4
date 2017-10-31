@@ -22,6 +22,11 @@ def same(a,b):
     else:
         return False
 
-lastLetter('Jack')
+csia() #test function #1
+print(average(1,2,3)) #test function #2
+lastLetter('Jack') #test function #3
+print(same(2*3,7-1)) #test function #4
+
+
 
 
