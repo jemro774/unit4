@@ -14,7 +14,8 @@ def average(x,y,z):
 
 def lastLetter(name):
     for ch in name:
-        print(ch)
+        print()
+    print(ch)
 
 def same(a,b):
     if a == b:
@@ -24,7 +25,7 @@ def same(a,b):
 
 csia() #test function #1
 print(average(1,2,3)) #test function #2
-lastLetter('Jack') #test function #3
+lastLetter('Smedinghoff') #test function #3
 print(same(2*3,7-1)) #test function #4
 
 
